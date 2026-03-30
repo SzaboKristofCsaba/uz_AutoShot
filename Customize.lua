@@ -3,7 +3,7 @@ Customize = {}
 -- General
 Customize.Command           = 'shotmaker'
 Customize.MenuCommand       = 'wardrobe'
-Customize.AceRestricted     = true          -- true = ACE permission required (see README)
+Customize.AceRestricted     = false          -- true = ACE permission required (see README)
 Customize.RoutingBucket     = 999
 
 Customize.ScreenshotQuality = 0.92          -- 0.0–1.0 (webp/jpg only)
