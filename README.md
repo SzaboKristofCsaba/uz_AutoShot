@@ -45,7 +45,21 @@ Automatic clothing thumbnail generator & browser for FiveM. Captures every drawa
 | `/shotmaker` | Open capture preview — select categories, adjust camera, then start |
 | `/wardrobe` | Open clothing browser — browse thumbnails, apply items, re-capture |
 
-Both commands are configurable in `Customize.lua`.
+Both commands require ACE permission by default. Add to `server.cfg`:
+
+```cfg
+add_ace identifier.license:YOUR_LICENSE_HERE command.shotmaker allow
+add_ace identifier.license:YOUR_LICENSE_HERE command.wardrobe allow
+```
+
+Or grant to a principal group:
+```cfg
+add_ace group.admin command.shotmaker allow
+add_ace group.admin command.wardrobe allow
+add_principal identifier.license:YOUR_LICENSE_HERE group.admin
+```
+
+Set `Customize.AceRestricted = false` in `Customize.lua` to disable permission checks.
 
 ## Configuration
 

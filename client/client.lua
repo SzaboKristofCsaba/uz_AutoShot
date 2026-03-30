@@ -958,8 +958,8 @@ end)
 
 -- COMMANDS
 
-RegisterCommand(Customize.Command, function() EnterCapturePreview() end, false)
-RegisterCommand(Customize.MenuCommand, function() OpenClothingMenu() end, false)
+RegisterCommand(Customize.Command, function() EnterCapturePreview() end, Customize.AceRestricted)
+RegisterCommand(Customize.MenuCommand, function() OpenClothingMenu() end, Customize.AceRestricted)
 
 -- EXPORTS (see DOCS.md for full usage examples)
 
