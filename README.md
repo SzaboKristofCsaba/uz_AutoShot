@@ -6,6 +6,47 @@ Iterates every drawable and texture variation automatically, removes the chroma 
 
 <img src="uz-autoshot-preview.png" width="800" alt="uz_AutoShot Preview"/>
 
+  <p>
+  <img width="12%" alt="clothing-1"
+  src="https://github.com/user-attachments/assets/3ceed7d8-b7f9-4240-902e-e71f8cf36518" />
+  <img width="12%" alt="clothing-2"
+  src="https://github.com/user-attachments/assets/ae90d820-745c-492f-8ad2-5f0eaa502ab3" />
+  <img width="12%" alt="clothing-4"
+  src="https://github.com/user-attachments/assets/dc655ac8-8444-47c1-bce2-a612a8eccad5" />
+  <img width="12%" alt="clothing-5"
+  src="https://github.com/user-attachments/assets/07b93377-2532-4e8b-9dab-e32d3da5c346" />
+  <img width="12%" alt="clothing-7"
+  src="https://github.com/user-attachments/assets/1e90fa62-f64e-4586-8b6d-83dce678f1fa" />
+  <img width="12%" alt="clothing-8"
+  src="https://github.com/user-attachments/assets/5434cb8a-0d73-4100-a73e-8eda7626fcd9" />
+  <img width="12%" alt="clothing-9"
+  src="https://github.com/user-attachments/assets/4593f92e-b9c9-4e4f-99de-fa97a2364718" />
+  <img width="12%" alt="clothing-10"
+  src="https://github.com/user-attachments/assets/bf1d2cb3-7faa-434e-91fe-c6b3e2713ebf" />
+  <img width="12%" alt="clothing-11"
+  src="https://github.com/user-attachments/assets/5672bc1e-84bf-4f6c-b167-0383cc483608" />
+  <img width="12%" alt="clothing-13"
+  src="https://github.com/user-attachments/assets/b28dba8a-8d25-4ce2-a0f3-26bc9d45f71c" />
+  <img width="12%" alt="vehicle-2"
+  src="https://github.com/user-attachments/assets/d708b593-f96b-44a5-8933-eb0a35600a79" />
+  <img width="12%" alt="vehicle-3"
+  src="https://github.com/user-attachments/assets/69725c7e-9cfa-4450-b631-5441f46a4af8" />
+  <img width="12%" alt="vehicle-6"
+  src="https://github.com/user-attachments/assets/3689ea2c-4a76-47d3-8903-9bd3daf06442" />
+  <img width="12%" alt="vehicle-4"
+  src="https://github.com/user-attachments/assets/f381a224-27f7-4a5f-a41f-392bf016cf12" />
+  <img width="12%" alt="vehicle-5"
+  src="https://github.com/user-attachments/assets/e16a5fb1-2c10-42d1-a097-af57d411cd99" />
+  <img width="12%" alt="vehicle-7"
+  src="https://github.com/user-attachments/assets/d0920b85-eff4-4f19-89c4-5a9781d0e3c1" />
+  <img width="12%" alt="clothing 14"
+  src="https://github.com/user-attachments/assets/a09d2b60-30e3-4b4d-9571-3ec5309e8a4e" />
+  <img width="12%" alt="object"
+  src="https://github.com/user-attachments/assets/6149adf2-121d-4764-906a-2cba2ad4900a" />
+  <img width="12%" alt="vehicle-1"
+  src="https://github.com/user-attachments/assets/63596701-158c-468a-8d26-edf9ccb1fea1" />
+  </p>
+
 ---
 
 ## How It Works
