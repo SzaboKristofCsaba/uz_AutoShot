@@ -28,21 +28,37 @@ function buildItems() {
                 walkDir(path.join(dir, entry.name), entryRel);
             } else if (/\.(png|webp|jpg)$/.test(entry.name)) {
                 const parts = entryRel.replace(/\.(png|webp|jpg)$/, '').split('/');
-                if (parts.length >= 3) {
+                if (parts.length === 2 && (parts[0] === 'vehicles' || parts[0] === 'objects')) {
+                    const modelName = parts[1];
+                    items.push({
+                        url:      'https://cfx-nui-' + RESOURCE + '/shots/' + entryRel,
+                        file:     entryRel,
+                        gender:   'unisex',
+                        type:     parts[0] === 'vehicles' ? 'vehicle' : 'object',
+                        id:       0,
+                        drawable: 0,
+                        texture:  0,
+                        model:    modelName,
+                    });
+                } else if (parts.length >= 3) {
                     const gender    = parts[0];
                     const catPart   = parts[1];
                     const drawPart  = parts[2];
                     const isProp    = catPart.startsWith('prop_');
-                    const catId     = isProp ? parseInt(catPart.replace('prop_', '')) : parseInt(catPart);
+                    const isOverlay = catPart.startsWith('overlay_');
+                    const itemType  = isOverlay ? 'overlay' : (isProp ? 'prop' : 'component');
+                    const catId     = isOverlay ? parseInt(catPart.replace('overlay_', ''))
+                                   : isProp    ? parseInt(catPart.replace('prop_', ''))
+                                   :             parseInt(catPart);
                     const drawParts = drawPart.split('_');
                     items.push({
                         url:      'https://cfx-nui-' + RESOURCE + '/shots/' + entryRel,
                         file:     entryRel,
                         gender:   gender,
-                        type:     isProp ? 'prop' : 'component',
+                        type:     itemType,
                         id:       catId || 0,
                         drawable: parseInt(drawParts[0]) || 0,
-                        texture:  parseInt(drawParts[1]) || 0,
+                        texture:  isOverlay ? 0 : (parseInt(drawParts[1]) || 0),
                     });
                 }
             }
