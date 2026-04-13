@@ -77,6 +77,7 @@ Iterates every drawable and texture variation automatically, removes the chroma 
 ## Requirements
 
 - [screenshot-basic](https://github.com/citizenfx/screenshot-basic) *(included on most servers)*
+  or [screencapture](https://github.com/itschip/screencapture) *(recommended replacement)*
 - FiveM server artifacts with `yarn` support (built-in since 4892+)
 
 ---

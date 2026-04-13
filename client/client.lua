@@ -353,22 +353,28 @@ end
 -- TEXTURE LOADING
 -- ════════════════════════════════════════════════════════
 
+local function ForceHighQuality()
+    OverrideLodscaleThisFrame(1.0)
+    SetHdArea(0.0, 0.0, -150.0, 50.0)
+    SetFocusPosAndVel(0.0, 0.0, -150.0, 0.0, 0.0, 0.0)
+end
+
 local function WaitForClothingLoaded(ped, componentId, drawableId, textureId)
+    -- Preload texture
     SetPedPreloadVariationData(ped, componentId, drawableId, textureId)
-    local timeout = GetGameTimer() + 3000
+    local timeout = GetGameTimer() + 800
     while not HasPedPreloadVariationDataFinished(ped) and GetGameTimer() < timeout do
-        Wait(10)
+        Wait(0)
     end
+    -- Apply
     SetPedComponentVariation(ped, componentId, drawableId, textureId, 0)
     ReleasePedPreloadVariationData(ped)
-
-    local coords = GetEntityCoords(ped)
-    RequestCollisionAtCoord(coords.x, coords.y, coords.z)
-    local streamTimeout = GetGameTimer() + 1500
-    while not HasCollisionLoadedAroundEntity(ped) and GetGameTimer() < streamTimeout do
-        Wait(10)
-    end
-    Wait(Customize.TextureLoadWait)
+    -- Force HD + 2 render frames
+    ForceHighQuality()
+    SetEntityLodDist(ped, 10000)
+    Wait(0)
+    ForceHighQuality()
+    Wait(0)
 end
 
 local function WaitForPropLoaded(ped, propId, drawableId, textureId)
@@ -411,6 +417,7 @@ end
 -- ════════════════════════════════════════════════════════
 
 local function CaptureAndUpload(filename)
+    ForceHighQuality()
     local done = false
     local encoding = Customize.ScreenshotFormat or 'png'
     if Customize.TransparentBg then encoding = 'png' end
