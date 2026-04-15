@@ -416,6 +416,12 @@ end
 -- CAPTURE & UPLOAD
 -- ════════════════════════════════════════════════════════
 
+local function GetBackendURL()
+    local endpoint = GetCurrentServerEndpoint()
+    local ip = endpoint and endpoint:match('^([^:]+)') or '127.0.0.1'
+    return Customize.BackendURL:gsub('127%.0%.0%.1', ip)
+end
+
 local function CaptureAndUpload(filename)
     ForceHighQuality()
     local done = false
@@ -438,7 +444,7 @@ local function CaptureAndUpload(filename)
     end
 
     exports['screenshot-basic']:requestScreenshotUpload(
-        Customize.BackendURL, 'files[]', opts,
+        GetBackendURL(), 'files[]', opts,
         function() done = true end
     )
 

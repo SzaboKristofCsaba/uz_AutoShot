@@ -512,8 +512,21 @@ server.on('error', (err) => {
     console.log('^1[uz_AutoShot]^0 Server error: ' + err.message);
 });
 
-server.listen(PORT, '127.0.0.1', () => {
-    console.log('^2[uz_AutoShot]^0 Backend ready on http://127.0.0.1:' + PORT);
+function getServerIP() {
+    const nets = os.networkInterfaces();
+    for (const name of Object.keys(nets)) {
+        for (const net of nets[name]) {
+            if (net.family === 'IPv4' && !net.internal) {
+                return net.address;
+            }
+        }
+    }
+    return '0.0.0.0';
+}
+
+server.listen(PORT, '0.0.0.0', () => {
+    const ip = getServerIP();
+    console.log('^2[uz_AutoShot]^0 Backend ready on http://' + ip + ':' + PORT);
 });
 
 onNet('uz_autoshot:server:setBucket', (bucket) => {
