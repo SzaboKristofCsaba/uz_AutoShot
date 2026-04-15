@@ -12,6 +12,8 @@ Customize.TransparentBg     = true          -- chroma key removal (png only)
 Customize.ScreenshotWidth   = 512
 Customize.ScreenshotHeight  = 512
 
+Customize.BackendURL        = 'http://127.0.0.1:3959/upload'
+
 Customize.StudioCoords      = vector3(0.0, 0.0, -150.0)
 Customize.StudioHeading     = 180.0
 
